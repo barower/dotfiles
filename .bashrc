@@ -122,3 +122,4 @@ fi
 
 export EDITOR=vim;
 export VISUAL=vim;
+. "$HOME/.cargo/env"
