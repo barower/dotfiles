@@ -1,0 +1,6 @@
+
+
+[[language]]
+name = "rust"
+config = { rust-analyzer = { inlayHints = { reborrowHints = { "enable" = true }, lifetimeElisionHints = { "enable" = true } } } }
+

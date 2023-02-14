@@ -1,5 +1,7 @@
 [user]
-	email = bartlomiej.osinski@enigma.com.pl
+	email = osinskibartlomiej@gmail.com
 	name = Bartłomiej Osiński
 [core]
-	editor = vim
+	editor = nvim
+[alias]
+	graph = log --all --graph --decorate --oneline
