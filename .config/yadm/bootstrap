@@ -1,1 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+check_distro() {
+	sed -n "s/^NAME\=\"\(.*\)\"/\1/p" /etc/os-release
+}
+
+YADM_DISTRO=$(check_distro)
+YADM_DIR=~/.config/yadm
+
+echo "Current system is $YADM_DISTRO" 
+
+. $YADM_DIR/init_vim
+. $YADM_DIR/update_nvim

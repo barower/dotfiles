@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+case "$YADM_DISTRO" in
+	Ubuntu*) sudo snap install --channel beta nvim --classic ;;
+	*)       echo "Unknown OS type"; exit 1 ;;
+esac
+
+echo "Updating Plug..."
+nvim --headless +PlugUpgrade +qa
+
+echo "Updating neovim plugins..."
+nvim --headless +PlugInstall +qa
+nvim --headless +PlugUpdate +qa
+
+echo "Updating treesitter parsers..."
+nvim --headless +TSUpdate +qa
+
+echo "Updating done."

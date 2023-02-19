@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo Installing neovim...
+
+#CONFIG_DIR=$(readlink -f $(dirname $0))
+CONFIG_DIR=~/.config/nvim
+
+ln -f -s $CONFIG_DIR ~/.vim
+ln -f -s $CONFIG_DIR/vimrc ~/.vimrc
+
