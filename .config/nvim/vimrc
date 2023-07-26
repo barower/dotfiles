@@ -57,6 +57,12 @@ if !has('nvim')
 	set updatetime=100
 endif
 
+" Stop messing with newlines at the end of file all the time
+set nofixendofline
+
+" Paste directly from keyboard using p
+set clipboard=unnamed
+
 " ---------------------------------------------------
 "		       Plugins
 " ---------------------------------------------------
