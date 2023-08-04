@@ -1,0 +1,32 @@
+# yamllint disable rule:braces rule:commas rule:colons rule:comments-indentation
+---
+window:
+    # Blank space added around the window in pixels
+    padding:
+        x: 0
+        y: 0
+
+    # Spread additional padding evenly around the terminal content
+    dynamic_padding: true
+
+    # Option works as Alt key
+    option_as_alt: Both
+
+    # Disable border and title bar
+    decorations: buttonless
+
+font:
+    normal:
+        family: CodeNewRoman Nerd Font
+        style: Regular
+    bold:
+        family: CodeNewRoman Nerd Font
+        style: Bold
+    italic:
+        family: CodeNewRoman Nerd Font
+        style: Italic
+
+    # Point size of the font
+    size: 11.5
+
+
