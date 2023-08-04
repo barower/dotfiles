@@ -20,3 +20,6 @@ cursorline = true
 #[editor.indent-guides]
 #render = true
 #character = "|"
+
+[keys.insert]
+"C-[" = "normal_mode"
