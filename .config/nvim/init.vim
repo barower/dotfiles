@@ -17,7 +17,6 @@ source ~/.config/nvim/lspconfig.vim
 source ~/.config/nvim/telescopeconfig.vim
 source ~/.config/nvim/dapconfig.vim
 source ~/.config/nvim/zenmodeconfig.vim
-" source ~/.config/nvim/nvimtreeconfig.vim
 source ~/.config/nvim/bufferlineconfig.vim
 source ~/.config/nvim/treesitterconfig.vim
 source ~/.config/nvim/gitsignsconfig.vim

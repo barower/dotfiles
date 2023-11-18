@@ -127,9 +127,6 @@ if has('nvim')
 	Plug 'nvim-telescope/telescope-fzy-native.nvim'
 	Plug 'kyazdani42/nvim-web-devicons'
 
-	" File browser
-	Plug 'kyazdani42/nvim-tree.lua'
-
 	" Statusline
 	Plug 'nvim-lualine/lualine.nvim'
 
