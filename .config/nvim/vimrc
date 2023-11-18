@@ -85,6 +85,9 @@ Plug 'moll/vim-bbye'
 " Proper indentation
 Plug 'tpope/vim-sleuth'
 
+" Minimap
+Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+
 if has('nvim')
 	" LSP
 	Plug 'neovim/nvim-lspconfig'
@@ -167,6 +170,11 @@ call plug#end()
 let g:hardtime_default_on = 1
 let g:hardtime_maxcount = 2
 let g:hardtime_allow_different_key = 1
+
+" Minimap settings
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
 
 " ---------------------------------------------------
 "		       Keymaps
