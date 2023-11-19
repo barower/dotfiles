@@ -63,6 +63,9 @@ set nofixendofline
 " Paste directly from keyboard using p
 set clipboard=unnamed
 
+" Cursorline
+set cursorline
+
 " ---------------------------------------------------
 "		       Plugins
 " ---------------------------------------------------
