@@ -173,7 +173,7 @@ let g:hardtime_allow_different_key = 1
 
 " Minimap settings
 let g:minimap_width = 10
-let g:minimap_auto_start = 1
+let g:minimap_auto_start = 0
 let g:minimap_auto_start_win_enter = 1
 
 " ---------------------------------------------------
@@ -231,3 +231,6 @@ nmap <leader>gd :Git difftool<cr>
 
 " <leader>c - show git diff --cached
 nmap <leader>gc :Git difftool --cached<cr>
+
+" <leader>m - toggle minimap
+nmap <leader>m :MinimapToggle<cr>
