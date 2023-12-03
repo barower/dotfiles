@@ -1,0 +1,9 @@
+pane_frames true
+theme "gruvbox-dark"
+copy_command: "pbcopy"
+mouse_mode false
+
+keybinds {
+    unbind "Ctrl q"
+}
+
