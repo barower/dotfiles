@@ -17,7 +17,7 @@ nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> [g <cmd>lua vim.diagnostic.goto_prev()<CR>
 nnoremap <silent> ]g <cmd>lua vim.diagnostic.goto_next()<CR>
 nnoremap <silent> <leader>a <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <silent> <leader>x <cmd>Telescope lsp_code_actions<CR>
+nnoremap <silent> <leader>x <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> <leader>ll <cmd>!tail $HOME/.cache/nvim/lsp.log<CR>
 
 " clangd only
