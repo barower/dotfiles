@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 case "$OSTYPE" in
 	linux*)   APPIMAGE_NAME=nvim.appimage

@@ -102,6 +102,10 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias r="source ranger"
+alias ,gd='nvim -c "Git difftool"'
+alias ,gc='nvim -c "Git difftool --cached"'
+alias ,fg='nvim -c "Telescope live_grep"'
+alias ,ff='nvim -c "Telescope find_files"'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
