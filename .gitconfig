@@ -1,7 +1,0 @@
-[user]
-	email = osinskibartlomiej@gmail.com
-	name = Bartłomiej Osiński
-[core]
-	editor = nvim
-[alias]
-	graph = log --all --graph --decorate --oneline
