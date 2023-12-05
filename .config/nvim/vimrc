@@ -115,6 +115,7 @@ if has('nvim')
 
 	" Treesitter
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'nvim-treesitter/nvim-treesitter-context'
 
 	" Mappings helper
 	Plug 'folke/which-key.nvim'
