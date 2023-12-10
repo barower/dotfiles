@@ -4,6 +4,7 @@ require('toggleterm').setup{
     shade_terminals = true,
     on_open = function(term)
         vim.cmd("DisableWhitespace")
+        vim.cmd("noh")
     end,
     on_close = function(term)
         vim.cmd("EnableWhitespace")
