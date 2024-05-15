@@ -107,6 +107,15 @@ alias ,gc='nvim -c "Git difftool --cached"'
 alias ,fg='nvim -c "Telescope live_grep"'
 alias ,ff='nvim -c "Telescope find_files"'
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
