@@ -28,3 +28,5 @@ function r
 	command rm -f -- $tempfile
 	return $return_value
 end
+
+zoxide init fish | source
