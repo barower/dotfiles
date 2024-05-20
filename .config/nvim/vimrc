@@ -94,7 +94,6 @@ Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 if has('nvim')
 	" LSP
 	Plug 'neovim/nvim-lspconfig'
-	Plug 'simrat39/rust-tools.nvim'
 
 	" Auto completion
 	Plug 'hrsh7th/nvim-cmp'
@@ -161,7 +160,7 @@ endif
 if !has('nvim')
 	Plug 'ap/vim-buftabline'
 else
-	Plug 'akinsho/bufferline.nvim'
+	Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 endif
 
 call plug#end()

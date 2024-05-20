@@ -31,17 +31,11 @@ lua << EOF
 		capabilities = capabilities
 	}
 
-	require('rust-tools').setup({
-		server = {
-			settings = {
-				["rust-analyzer"] = {
-					checkOnSave = {
-						command = "clippy";
-					};
-				}
-			}
-		}
-	})
+	require'lspconfig'.rust_analyzer.setup {
+		settings = {
+			['rust-analyzer'] = {},
+		},
+	}
 
 	require'lspconfig'.cmake.setup{
 		capabilities = capabilities
