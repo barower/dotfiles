@@ -24,3 +24,7 @@ nnoremap <silent> ghs <cmd>ClangdSwitchSourceHeader<CR>
 
 " Zen Mode
 nnoremap <silent> <leader>z <cmd>ZenMode<CR>
+
+" Oil shortcuts
+nnoremap <silent> <leader>o <cmd>Oil --float .<CR>
+nnoremap <silent> <leader>i <cmd>Oil --float %:p:h<CR>
