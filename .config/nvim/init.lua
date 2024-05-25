@@ -6,6 +6,7 @@ vim.cmd('highlight Whitespace term=italic ctermfg=black')
 
 --colorscheme
 vim.o.termguicolors = true
+vim.cmd('colorscheme murphy') -- what?
 vim.cmd('colorscheme melange')
 
 --conceal links

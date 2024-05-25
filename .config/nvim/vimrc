@@ -9,11 +9,6 @@ if !has('nvim')
 	autocmd bufwritepost .vimrc source ~/.vimrc
 endif
 
-" color settings
-"set t_Co=256
-"highlight! link SignColumn LineNr
-colorscheme murphy
-
 set encoding=UTF-8
 
 " who would care about vi compatibility anyway
