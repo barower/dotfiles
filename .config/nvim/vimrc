@@ -41,9 +41,6 @@ call matchadd('ColorColumn', '\%81v', 100)
 set tabstop=8
 set shiftwidth=8
 
-" ctags - automatically look for tags file recursively
-set tags=tags;/
-
 " Do not expand comments on new line
 au FileType * set fo-=c fo-=r fo-=o
 
@@ -73,9 +70,6 @@ Plug 'tpope/vim-surround'
 " (In)Convenience
 Plug 'takac/vim-hardtime'
 Plug 'ntpeters/vim-better-whitespace'
-
-" Python Behave helper
-Plug 'barower/behave.vim'
 
 " Buffer management
 Plug 'moll/vim-bbye'
@@ -180,9 +174,6 @@ nnoremap ]b :bnext<cr>
 nnoremap [b :bprev<cr>
 nnoremap ]B :blast<cr>
 nnoremap [B :bfirst<cr>
-
-nnoremap gbh :call behave#goto_step_definition()<cr>
-nnoremap gbn :call behave#find_usages()<cr>
 
 " ---------------------------------------------------
 "		    Leader keymaps
