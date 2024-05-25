@@ -1,17 +1,16 @@
-source ~/.vimrc
+vim.cmd('source ~/.vimrc')
 
-" show tabs
-set list
-highlight Whitespace term=italic ctermfg=black
+-- show tabs
+vim.o.list = true
+vim.cmd('highlight Whitespace term=italic ctermfg=black')
 
-" colorscheme
-set termguicolors
-colorscheme melange
+--colorscheme
+vim.o.termguicolors = true
+vim.cmd('colorscheme melange')
 
-" conceal links
-set conceallevel=2
+--conceal links
+vim.o.conceallevel = 2
 
-lua <<EOF
 require('completionconfig')
 require('lspsettings')
 require('telescopeconfig')
@@ -23,7 +22,5 @@ require('whichkeyconfig')
 require('statuslineconfig')
 require('autobracketsconfig')
 require('terminalconfig')
-EOF
 
-source ~/.config/nvim/nvimbindings.vim
-
+vim.cmd('source ~/.config/nvim/nvimbindings.vim')
