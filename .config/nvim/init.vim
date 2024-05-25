@@ -1,7 +1,3 @@
-" TODO list:
-" 1. Harpoon?
-" 2. Klient GDB
-
 source ~/.vimrc
 
 " show tabs
@@ -15,18 +11,19 @@ colorscheme melange
 " conceal links
 set conceallevel=2
 
-
-source ~/.config/nvim/completionconfig.vim
-source ~/.config/nvim/lspconfig.vim
-source ~/.config/nvim/telescopeconfig.vim
-source ~/.config/nvim/zenmodeconfig.vim
-source ~/.config/nvim/bufferlineconfig.vim
-source ~/.config/nvim/treesitterconfig.vim
-source ~/.config/nvim/gitsignsconfig.vim
-source ~/.config/nvim/whichkeyconfig.vim
-source ~/.config/nvim/statuslineconfig.vim
-source ~/.config/nvim/autobracketsconfig.vim
-source ~/.config/nvim/terminalconfig.vim
+lua <<EOF
+require('completionconfig')
+require('lspsettings')
+require('telescopeconfig')
+require('zenmodeconfig')
+require('bufferlineconfig')
+require('treesitterconfig')
+require('gitsignsconfig')
+require('whichkeyconfig')
+require('statuslineconfig')
+require('autobracketsconfig')
+require('terminalconfig')
+EOF
 
 source ~/.config/nvim/nvimbindings.vim
 

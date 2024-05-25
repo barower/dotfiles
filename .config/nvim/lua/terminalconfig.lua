@@ -1,4 +1,3 @@
-lua << EOF
 require('toggleterm').setup{
     open_mapping = [[<leader>t]],
     shade_terminals = true,
@@ -15,5 +14,3 @@ require('toggleterm').setup{
         border = "curved",
     }
 }
-EOF
-

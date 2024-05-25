@@ -119,13 +119,6 @@ if has('nvim')
 	" Mappings helper
 	Plug 'folke/which-key.nvim'
 
-	" Debugging
-	Plug 'mfussenegger/nvim-dap'
-	Plug 'mfussenegger/nvim-dap-python'
-	Plug 'rcarriga/nvim-dap-ui'
-	Plug 'theHamsta/nvim-dap-virtual-text'
-	Plug 'nvim-telescope/telescope-dap.nvim'
-
 	" Telescope
 	Plug 'nvim-lua/popup.nvim'
 	Plug 'nvim-lua/plenary.nvim'
