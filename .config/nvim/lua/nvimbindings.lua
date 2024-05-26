@@ -1,31 +1,33 @@
 -- Find stuff with Telescope
-vim.keymap.set('n', '<Leader>ff', '<cmd>Telescope find_files<cr>')
-vim.keymap.set('n', '<Leader>fg', '<cmd>Telescope live_grep<cr>')
-vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope git_branches<cr>')
-vim.keymap.set('n', '<Leader>fh', '<cmd>Telescope help_tags<cr>')
-vim.keymap.set('n', '<Leader>fc', '<cmd>Telescope git_bcommits<cr>')
-vim.keymap.set('n', '<Leader><Space>', '<cmd>Telescope resume<cr>')
+local telescope = require('telescope.builtin')
+vim.keymap.set('n', '<Leader>ff', telescope.find_files)
+vim.keymap.set('n', '<Leader>fg', telescope.live_grep)
+vim.keymap.set('n', '<Leader>fb', telescope.git_branches)
+vim.keymap.set('n', '<Leader>fh', telescope.help_tags)
+vim.keymap.set('n', '<Leader>fc', telescope.git_bcommits)
+vim.keymap.set('v', '<Leader>fc', telescope.git_bcommits_range)
+vim.keymap.set('n', '<Leader><Space>', telescope.resume)
 
 -- LSP navigation
-vim.keymap.set('n', 'gd', '<cmd>Telescope lsp_definitions<cr>')
-vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
-vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>')
-vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>')
-vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
-vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>')
+vim.keymap.set('n', 'gd', telescope.lsp_definitions)
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
+vim.keymap.set('n', 'gr', telescope.lsp_references)
+vim.keymap.set('n', 'gi', telescope.lsp_implementations)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 
 -- LSP actions
-vim.keymap.set('n', '<Leader>a', '<cmd>lua vim.lsp.buf.rename()<cr>')
-vim.keymap.set('n', '<Leader>x', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-vim.keymap.set('n', '<Leader>ll', '<cmd>!tail $HOME/.cache/nvim/lsp.log<cr>')
-vim.keymap.set('n', '<Leader>h', '<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>')
+vim.keymap.set('n', '<Leader>a', vim.lsp.buf.rename)
+vim.keymap.set('n', '<Leader>x', vim.lsp.buf.code_action)
+vim.keymap.set('n', '<Leader>ll', function() vim.cmd('!tail $HOME/.local/state/nvim/lsp.log') end)
+vim.keymap.set('n', '<Leader>h', function() return vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({})) end)
 
--- For clangd only, probably can be replaced by `gd`/`gD`
-vim.keymap.set('n', 'ghs', '<cmd>ClangdSwitchSourceHeader<cr>')
+-- For clangd only
+vim.keymap.set('n', 'ghs', function() vim.cmd('ClangdSwitchSourceHeader') end)
 
 -- Zen mode
-vim.keymap.set('n', '<Leader>z', '<cmd>ZenMode<cr>')
+vim.keymap.set('n', '<Leader>z', function() vim.system({'zellij', 'action', 'toggle-fullscreen'}); require('zen-mode').toggle() end)
 
 -- Oil for quick file manipulation
-vim.keymap.set('n', '<Leader>o', '<cmd>Oil --float .<cr>')
-vim.keymap.set('n', '<Leader>i', '<cmd>Oil --float %:p:h<cr>')
+vim.keymap.set('n', '<Leader>o', function() require('oil').toggle_float(vim.fn.getcwd()) end) -- open in cwd
+vim.keymap.set('n', '<Leader>i', require('oil').toggle_float) -- open in parent of current buffer
