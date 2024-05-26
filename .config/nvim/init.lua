@@ -1,13 +1,13 @@
-vim.cmd('source ~/.vimrc')
+vim.cmd.source('~/.vimrc')
 
 -- show tabs
 vim.o.list = true
-vim.cmd('highlight Whitespace term=italic ctermfg=black')
+vim.cmd.highlight({'Whitespace', 'term=italic', 'ctermfg=black'})
 
 --colorscheme
 vim.o.termguicolors = true
-vim.cmd('colorscheme murphy') -- what?
-vim.cmd('colorscheme melange')
+vim.cmd.colorscheme('murphy') -- what?
+vim.cmd.colorscheme('melange')
 
 --conceal links
 vim.o.conceallevel = 2
@@ -25,4 +25,4 @@ require('autobracketsconfig')
 require('terminalconfig')
 require('filemanipulation')
 
-vim.cmd('source ~/.config/nvim/nvimbindings.vim')
+vim.cmd.source('~/.config/nvim/nvimbindings.vim')
