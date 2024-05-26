@@ -25,4 +25,4 @@ require('autobracketsconfig')
 require('terminalconfig')
 require('filemanipulation')
 
-vim.cmd.source('~/.config/nvim/nvimbindings.vim')
+require('nvimbindings')
