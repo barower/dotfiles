@@ -1,7 +1,7 @@
 #!/bin/bash
 
 case "$OSTYPE" in
-	linux*)   APPIMAGE_NAME=nvim.appimage
+        linux*)   APPIMAGE_NAME=nvim.appimage
                   NVIM_DOWNLOAD_LINK=https://github.com/neovim/neovim/releases/download/nightly/$APPIMAGE_NAME
                   NVIM_CONFIG_PATH=~/.config/nvim
                   APPIMAGE_PATH=$NVIM_CONFIG_PATH/$APPIMAGE_NAME
@@ -45,10 +45,10 @@ case "$OSTYPE" in
         *)        echo "Uknown OS type"; exit 1 ;;
 esac
 
-# Wrzucenie całej paczki z w/w konfiguracją na semafor
-if [ "$1" = "--labnet" ]; then
-	echo "Uploading to labnet..."
-	semafor-send -z $NVIM_CONFIG_PATH
-fi
+# # Wrzucenie całej paczki z w/w konfiguracją na semafor
+# if [ "$1" = "--labnet" ]; then
+# 	echo "Uploading to labnet..."
+# 	semafor-send -z $NVIM_CONFIG_PATH
+# fi
 
 echo "Script done."

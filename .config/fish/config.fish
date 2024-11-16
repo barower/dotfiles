@@ -4,6 +4,8 @@ end
 
 set fish_greeting
 
+fish_add_path /home/bosinski/thirdparty/lua-language-server/bin
+
 function y
 	set tmp (mktemp -t "yazi-cwd.XXXXXX")
 	yazi $argv --cwd-file="$tmp"

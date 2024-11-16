@@ -123,3 +123,5 @@ fi
 export EDITOR=nvim;
 export VISUAL=nvim;
 . "$HOME/.cargo/env"
+
+export STM32_PRG_PATH=/home/bosinski/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin

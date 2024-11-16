@@ -119,3 +119,4 @@ function y() {
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+. "$HOME/.cargo/env"
