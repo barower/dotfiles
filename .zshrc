@@ -120,3 +120,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 . "$HOME/.cargo/env"
+eval "$(zoxide init zsh)"
