@@ -898,6 +898,11 @@ $env.config = {
     ]
 }
 
+alias ,gd = nvim -c "Git difftool"
+alias ,gc = nvim -c "Git difftool --cached"
+alias ,fg = nvim -c "Telescope find_files"
+alias ,ff = nvim -c "Telescope find_files"
+
 def --env y [...args] {
     let tmp = (mktemp -t "yazi-cwd.XXXXXX")
     yazi ...$args --cwd-file $tmp
