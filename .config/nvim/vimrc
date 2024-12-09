@@ -115,6 +115,9 @@ if has('nvim')
 	Plug 'nvim-telescope/telescope-fzy-native.nvim'
 	Plug 'kyazdani42/nvim-web-devicons'
 
+	" Harpoon
+	Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
+
 	" Statusline
 	Plug 'nvim-lualine/lualine.nvim'
 

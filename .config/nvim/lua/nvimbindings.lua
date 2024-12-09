@@ -40,3 +40,4 @@ vim.keymap.set('n', '<Leader>z', function() vim.system({'zellij', 'action', 'tog
 -- Oil for quick file manipulation
 vim.keymap.set('n', '<Leader>o', function() require('oil').toggle_float(vim.fn.getcwd()) end) -- open in cwd
 vim.keymap.set('n', '<Leader>i', require('oil').toggle_float) -- open in parent of current buffer
+

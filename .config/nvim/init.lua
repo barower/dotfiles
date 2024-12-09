@@ -15,6 +15,7 @@ vim.o.conceallevel = 2
 require('completionconfig')
 require('lspsettings')
 require('telescopeconfig')
+require('harpoonconfig')
 require('zenmodeconfig')
 require('bufferlineconfig')
 require('treesitterconfig')
