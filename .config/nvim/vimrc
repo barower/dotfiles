@@ -137,6 +137,7 @@ endif
 
 " Git common settings
 Plug 'tpope/vim-fugitive'
+Plug 'shumphrey/fugitive-gitlab.vim'
 if !has('nvim')
 	Plug 'airblade/vim-gitgutter'
 else
@@ -165,6 +166,9 @@ let g:hardtime_allow_different_key = 1
 let g:minimap_width = 10
 let g:minimap_auto_start = 0
 let g:minimap_auto_start_win_enter = 1
+
+" fugitive settings
+let g:fugitive_gitlab_domains = {'10.11.0.31': 'http://10.11.0.31:8070'}
 
 " ---------------------------------------------------
 "		       Keymaps
@@ -221,3 +225,6 @@ nmap <leader>gc :Git difftool --cached<cr>
 
 " <leader>m - toggle minimap
 nmap <leader>m :MinimapToggle<cr>
+
+" <leader>gb - jump to corresponding fragment in git
+map <leader>gb :GBrowse<cr>
