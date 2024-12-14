@@ -40,6 +40,12 @@ require'lspconfig'.rust_analyzer.setup {
 	-- },
 	settings = {
 		['rust-analyzer'] = {
+			diagnostic = {
+				refreshSupport = false,
+			},
+			diagnostics = {
+				refreshSupport = false,
+			},
 			cargo = {
 				allFeatures = true,
 			},
@@ -82,6 +88,16 @@ require'lspconfig'.lua_ls.setup {
     Lua = {}
   }
 }
+
+for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
+    local default_diagnostic_handler = vim.lsp.handlers[method]
+    vim.lsp.handlers[method] = function(err, result, context, config)
+        if err ~= nil and err.code == -32802 then
+            return
+        end
+        return default_diagnostic_handler(err, result, context, config)
+    end
+end
 
 vim.api.nvim_create_autocmd({ "BufEnter" }, {
 	pattern = { "*.bb", "*.bbappend", "*.bbclass", "*.inc", "conf/*.conf" },
