@@ -47,6 +47,9 @@ au FileType * set fo-=c fo-=r fo-=o
 if !has('nvim')
 	" refresh frequency for gitgutter
 	set updatetime=100
+
+	" better C-o/C-i behaviour
+	set jumpoptions+=stack
 endif
 
 " Stop messing with newlines at the end of file all the time
@@ -174,6 +177,8 @@ let g:fugitive_gitlab_domains = {'10.11.0.31': 'http://10.11.0.31:8070'}
 "		       Keymaps
 " ---------------------------------------------------
 
+nnoremap <C-k> :cprev<CR>zz
+nnoremap <C-j> :cnext<CR>zz
 nnoremap ]q :cnext<cr>
 nnoremap [q :cprev<cr>
 nnoremap ]Q :clast<cr>
