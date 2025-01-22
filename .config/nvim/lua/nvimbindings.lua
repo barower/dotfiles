@@ -42,4 +42,4 @@ vim.keymap.set('n', '<Leader>o', function() require('oil').toggle_float(vim.fn.g
 vim.keymap.set('n', '<Leader>i', require('oil').toggle_float) -- open in parent of current buffer
 
 -- nvim-tree quick file browser
-vim.keymap.set('n', '<Leader>t', require('nvim-tree.api').tree.toggle)
+vim.keymap.set('n', '<Leader>t', function() require('nvim-tree.api').tree.toggle({find_file = true}) end)
