@@ -23,7 +23,6 @@ require('gitsignsconfig')
 require('whichkeyconfig')
 require('statuslineconfig')
 require('autobracketsconfig')
-require('terminalconfig')
 require('filemanipulation')
 
 require('nvimbindings')

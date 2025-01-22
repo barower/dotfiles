@@ -127,9 +127,6 @@ if has('nvim')
 	" Auto close brackets
 	Plug 'windwp/nvim-autopairs'
 
-	" Sensible terminal inside neovim
-	Plug 'akinsho/toggleterm.nvim'
-
 	" Zen Mode
 	Plug 'folke/twilight.nvim'
 	Plug 'folke/zen-mode.nvim'
