@@ -106,6 +106,7 @@ alias ,gd='nvim -c "Git difftool"'
 alias ,gc='nvim -c "Git difftool --cached"'
 alias ,fg='nvim -c "Telescope live_grep"'
 alias ,ff='nvim -c "Telescope find_files"'
+alias gk='gitk --all'
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
