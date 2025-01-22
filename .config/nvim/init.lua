@@ -24,5 +24,6 @@ require('whichkeyconfig')
 require('statuslineconfig')
 require('autobracketsconfig')
 require('filemanipulation')
+require('filebrowser')
 
 require('nvimbindings')

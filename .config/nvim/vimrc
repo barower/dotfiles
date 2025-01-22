@@ -133,6 +133,9 @@ if has('nvim')
 
 	" File manipulation
 	Plug 'stevearc/oil.nvim'
+
+	" File browser
+	Plug 'nvim-tree/nvim-tree.lua'
 endif
 
 " Git common settings
