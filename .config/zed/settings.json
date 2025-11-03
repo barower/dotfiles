@@ -7,13 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "relative_line_numbers": true,
   "vim_mode": true,
   "agent": {
     "default_profile": "ask",
     "default_model": {
       "provider": "openai",
       "model": "gpt-5"
-    },
+    }
   },
   "telemetry": {
     "metrics": false
@@ -27,8 +28,12 @@
   },
 
   "theme": {
-    "mode": "system",
+    "mode": "light",
     "light": "Ayu Mirage",
     "dark": "Ayu Dark"
+  },
+
+  "experimental.theme_overrides": {
+    "editor.invisible": "#444444"
   }
 }
