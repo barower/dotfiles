@@ -1,0 +1,34 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "vim_mode": true,
+  "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-5"
+    },
+  },
+  "telemetry": {
+    "metrics": false
+  },
+  "ui_font_size": 12,
+  "buffer_font_size": 11,
+  "show_whitespaces": "boundary",
+
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.85
+  },
+
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Mirage",
+    "dark": "Ayu Dark"
+  }
+}
