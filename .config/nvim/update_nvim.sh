@@ -1,8 +1,10 @@
 #!/bin/bash
 
+set -e
+
 case "$OSTYPE" in
-        linux*)   APPIMAGE_NAME=nvim.appimage
-                  NVIM_DOWNLOAD_LINK=https://github.com/neovim/neovim/releases/download/v0.10.2/$APPIMAGE_NAME
+        linux*)   APPIMAGE_NAME=nvim-linux-x86_64.appimage
+                  NVIM_DOWNLOAD_LINK=https://github.com/neovim/neovim/releases/download/v0.11.5/$APPIMAGE_NAME
                   NVIM_CONFIG_PATH=~/.config/nvim
                   APPIMAGE_PATH=$NVIM_CONFIG_PATH/$APPIMAGE_NAME
                   LOCAL_LINK_NAME=/usr/sbin/nvim
@@ -37,7 +39,6 @@ nvim --headless +TSUpdate +qa
 
 # Update rust-analyzer
 # First, remove it as a rustup component because they tend to be outdated
-rustup component remove rust-analyzer
 echo "Removing rust-analyzer binary from .cargo directory..." && rm -f ~/.cargo/bin/rust-analyzer
 
 case "$OSTYPE" in

@@ -125,7 +125,7 @@ if has('nvim')
 	Plug 'nvim-lualine/lualine.nvim'
 
 	" Auto close brackets
-	Plug 'windwp/nvim-autopairs'
+	Plug 'altermo/ultimate-autopair.nvim'
 
 	" Zen Mode
 	Plug 'folke/twilight.nvim'
@@ -161,7 +161,7 @@ call plug#end()
 " ---------------------------------------------------
 
 " Vim-hardtime settings:
-let g:hardtime_default_on = 1
+let g:hardtime_default_on = 0
 let g:hardtime_maxcount = 2
 let g:hardtime_allow_different_key = 1
 
