@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "buffer_font_family": ".ZedMono",
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "vim_mode": true,
   "agent": {
     "default_profile": "ask",
@@ -36,5 +36,18 @@
 
   "experimental.theme_overrides": {
     "editor.invisible": "#444444"
+  },
+
+  "lsp": {
+    "rust-analyzer": {
+      "binary": {
+        "path": "/home/bosinski/.cargo/bin/lspmux",
+        "arguments": [
+          "client",
+          "--server-path",
+          "/home/bosinski/.local/bin/rust-analyzer"
+        ]
+      }
+    }
   }
 }

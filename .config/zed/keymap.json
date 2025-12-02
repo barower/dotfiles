@@ -10,7 +10,6 @@
     "context": "Workspace",
     "bindings": {
       "alt-t": "terminal_panel::ToggleFocus",
-      ", t": "terminal_panel::ToggleFocus",
       ", f f": "file_finder::Toggle",
       ", v": "zed::OpenSettings"
     }
@@ -102,6 +101,12 @@
     "context": "(VimControl && !menu)",
     "bindings": {
       ", a": "editor::Rename"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      ", t": "workspace::ToggleLeftDock"
     }
   }
 ]
