@@ -27,6 +27,7 @@ vim.lsp.config('jdtls', { cmd = { '/home/bosinski/thirdparty/java-lsp/bin/jdtls'
 vim.lsp.enable('jdtls')
 
 vim.lsp.config('rust_analyzer', {
+	cmd = vim.lsp.rpc.connect("127.0.0.1", 27631),
 	settings = {
 		['rust-analyzer'] = {
 			diagnostic = {
@@ -38,10 +39,17 @@ vim.lsp.config('rust_analyzer', {
 			cargo = {
 				allFeatures = true,
 			},
+			lspMux = {
+				version = "1",
+				method = "connect",
+				server = "rust-analyzer",
+			}
 		},
 	},
 })
 vim.lsp.enable('rust_analyzer')
+
+require'fidget'.setup()
 
 for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
     local default_diagnostic_handler = vim.lsp.handlers[method]
