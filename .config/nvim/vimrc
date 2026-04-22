@@ -4,11 +4,6 @@
 
 set background=light
 
-" make it so that vimrc updates immediately after saving
-if !has('nvim')
-	autocmd bufwritepost .vimrc source ~/.vimrc
-endif
-
 set encoding=UTF-8
 
 " who would care about vi compatibility anyway
@@ -44,14 +39,6 @@ set shiftwidth=8
 " Do not expand comments on new line
 au FileType * set fo-=c fo-=r fo-=o
 
-if !has('nvim')
-	" refresh frequency for gitgutter
-	set updatetime=100
-
-	" better C-o/C-i behaviour
-	set jumpoptions+=stack
-endif
-
 " Stop messing with newlines at the end of file all the time
 set nofixendofline
 
@@ -60,57 +47,6 @@ set clipboard=unnamed
 
 " Cursorline
 set cursorline
-
-" ---------------------------------------------------
-"		       Plugins
-" ---------------------------------------------------
-
-if !has('nvim')
-	call plug#begin('~/.vim/plugged')
-
-	" Editor additions
-	Plug 'tpope/vim-surround'
-
-	" (In)Convenience
-	Plug 'takac/vim-hardtime'
-	Plug 'ntpeters/vim-better-whitespace'
-
-	" Buffer management
-	Plug 'moll/vim-bbye'
-
-	" Proper indentation
-	Plug 'tpope/vim-sleuth'
-
-	" Minimap
-	Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
-
-	" Git
-	Plug 'tpope/vim-fugitive'
-	Plug 'shumphrey/fugitive-gitlab.vim'
-	Plug 'airblade/vim-gitgutter'
-
-	" Bufferline
-	Plug 'ap/vim-buftabline'
-
-	call plug#end()
-endif
-
-" ---------------------------------------------------
-"		   Plugin settings
-" ---------------------------------------------------
-
-" Vim-hardtime settings:
-let g:hardtime_default_on = 0
-let g:hardtime_maxcount = 2
-let g:hardtime_allow_different_key = 1
-
-" Minimap settings
-let g:minimap_width = 10
-let g:minimap_auto_start = 0
-let g:minimap_auto_start_win_enter = 1
-
-" fugitive settings
-let g:fugitive_gitlab_domains = {'10.11.0.31': 'http://10.11.0.31:8070'}
 
 " ---------------------------------------------------
 "		       Keymaps
@@ -158,17 +94,3 @@ nmap <leader>p :echo expand('%:p')<cr>
 " <leader>s - split lines by whitespace
 nmap <leader>s :s/\s\+/\r/g<cr>:noh<cr><cr>
 
-" <leader>q - close single file
-nmap <leader>q :Bdelete<cr>
-
-" <leader>d - show git diff
-nmap <leader>gd :Git difftool<cr>
-
-" <leader>c - show git diff --cached
-nmap <leader>gc :Git difftool --cached<cr>
-
-" <leader>m - toggle minimap
-nmap <leader>m :MinimapToggle<cr>
-
-" <leader>gb - jump to corresponding fragment in git
-map <leader>gb :GBrowse<cr>

@@ -43,3 +43,14 @@ vim.keymap.set('n', '<Leader>i', require('oil').toggle_float) -- open in parent 
 
 -- nvim-tree quick file browser
 vim.keymap.set('n', '<Leader>t', function() require('nvim-tree.api').tree.toggle({find_file = true}) end)
+
+-- vim-bbye
+vim.keymap.set('n', '<Leader>q', '<cmd>Bdelete<cr>')
+
+-- fugitive
+vim.keymap.set('n', '<Leader>gd', '<cmd>Git difftool<cr>')
+vim.keymap.set('n', '<Leader>gc', '<cmd>Git difftool --cached<cr>')
+vim.keymap.set('n', '<Leader>gb', '<cmd>GBrowse<cr>')
+
+-- minimap
+vim.keymap.set('n', '<Leader>m', '<cmd>MinimapToggle<cr>')
