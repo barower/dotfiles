@@ -1,3 +1,5 @@
+require('plugins')
+
 vim.cmd.source('~/.vimrc')
 
 -- show tabs

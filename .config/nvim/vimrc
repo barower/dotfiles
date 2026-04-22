@@ -65,98 +65,35 @@ set cursorline
 "		       Plugins
 " ---------------------------------------------------
 
-call plug#begin('~/.vim/plugged')
-
-" Editor additions
-Plug 'tpope/vim-surround'
-
-" (In)Convenience
-Plug 'takac/vim-hardtime'
-Plug 'ntpeters/vim-better-whitespace'
-
-" Buffer management
-Plug 'moll/vim-bbye'
-
-" Proper indentation
-Plug 'tpope/vim-sleuth'
-
-" Minimap
-Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
-
-if has('nvim')
-	" LSP
-	Plug 'neovim/nvim-lspconfig'
-
-	" Auto completion
-	Plug 'hrsh7th/nvim-cmp'
-	Plug 'hrsh7th/cmp-nvim-lsp'
-	Plug 'hrsh7th/cmp-nvim-lua'
-	Plug 'hrsh7th/cmp-buffer'
-	Plug 'hrsh7th/cmp-path'
-	Plug 'hrsh7th/cmp-cmdline'
-
-	Plug 'ray-x/lsp_signature.nvim'
-
-	Plug 'j-hui/fidget.nvim'
-
-	" Snippets (needed for completion)
-	Plug 'hrsh7th/cmp-vsnip'
-	Plug 'hrsh7th/vim-vsnip'
-
-	" Color scheme
-	Plug 'savq/melange'
-
-	" Treesitter
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	Plug 'nvim-treesitter/nvim-treesitter-context'
-
-	" Mappings helper
-	Plug 'folke/which-key.nvim'
-
-	" Telescope
-	Plug 'nvim-lua/popup.nvim'
-	Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-telescope/telescope.nvim'
-	Plug 'nvim-telescope/telescope-fzy-native.nvim'
-	Plug 'kyazdani42/nvim-web-devicons'
-
-	" Harpoon
-	Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
-
-	" Statusline
-	Plug 'nvim-lualine/lualine.nvim'
-
-	" Auto close brackets
-	Plug 'altermo/ultimate-autopair.nvim'
-
-	" Zen Mode
-	Plug 'folke/twilight.nvim'
-	Plug 'folke/zen-mode.nvim'
-
-	" File manipulation
-	Plug 'stevearc/oil.nvim'
-
-	" File browser
-	Plug 'nvim-tree/nvim-tree.lua'
-endif
-
-" Git common settings
-Plug 'tpope/vim-fugitive'
-Plug 'shumphrey/fugitive-gitlab.vim'
 if !has('nvim')
+	call plug#begin('~/.vim/plugged')
+
+	" Editor additions
+	Plug 'tpope/vim-surround'
+
+	" (In)Convenience
+	Plug 'takac/vim-hardtime'
+	Plug 'ntpeters/vim-better-whitespace'
+
+	" Buffer management
+	Plug 'moll/vim-bbye'
+
+	" Proper indentation
+	Plug 'tpope/vim-sleuth'
+
+	" Minimap
+	Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+
+	" Git
+	Plug 'tpope/vim-fugitive'
+	Plug 'shumphrey/fugitive-gitlab.vim'
 	Plug 'airblade/vim-gitgutter'
-else
-	Plug 'lewis6991/gitsigns.nvim'
-endif
 
-" Bufferline
-if !has('nvim')
+	" Bufferline
 	Plug 'ap/vim-buftabline'
-else
-	Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
-endif
 
-call plug#end()
+	call plug#end()
+endif
 
 " ---------------------------------------------------
 "		   Plugin settings
