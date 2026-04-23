@@ -4,30 +4,6 @@
       "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
       "src": "https://github.com/akinsho/bufferline.nvim"
     },
-    "cmp-buffer": {
-      "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
-      "src": "https://github.com/hrsh7th/cmp-buffer"
-    },
-    "cmp-cmdline": {
-      "rev": "d126061b624e0af6c3a556428712dd4d4194ec6d",
-      "src": "https://github.com/hrsh7th/cmp-cmdline"
-    },
-    "cmp-nvim-lsp": {
-      "rev": "cbc7b02bb99fae35cb42f514762b89b5126651ef",
-      "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
-    },
-    "cmp-nvim-lua": {
-      "rev": "e3a22cb071eb9d6508a156306b102c45cd2d573d",
-      "src": "https://github.com/hrsh7th/cmp-nvim-lua"
-    },
-    "cmp-path": {
-      "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
-      "src": "https://github.com/hrsh7th/cmp-path"
-    },
-    "cmp-vsnip": {
-      "rev": "989a8a73c44e926199bfd05fa7a516d51f2d2752",
-      "src": "https://github.com/hrsh7th/cmp-vsnip"
-    },
     "fidget.nvim": {
       "rev": "889e2e96edef4e144965571d46f7a77bcc4d0ddf",
       "src": "https://github.com/j-hui/fidget.nvim"
@@ -60,10 +36,6 @@
     "minimap.vim": {
       "rev": "28c530f8e0929b73ef27c86f705ff8bcfcec97d8",
       "src": "https://github.com/wfxr/minimap.vim"
-    },
-    "nvim-cmp": {
-      "rev": "a1d504892f2bc56c2e79b65c6faded2fd21f3eca",
-      "src": "https://github.com/hrsh7th/nvim-cmp"
     },
     "nvim-lspconfig": {
       "rev": "e146efacbafed3789ac568abcc5a981c5decaa58",
@@ -136,10 +108,6 @@
     "vim-surround": {
       "rev": "3d188ed2113431cf8dac77be61b842acb64433d9",
       "src": "https://github.com/tpope/vim-surround"
-    },
-    "vim-vsnip": {
-      "rev": "9bcfabea653abdcdac584283b5097c3f8760abaa",
-      "src": "https://github.com/hrsh7th/vim-vsnip"
     },
     "which-key.nvim": {
       "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",

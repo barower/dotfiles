@@ -42,18 +42,6 @@ vim.pack.add({
 	gh('ray-x/lsp_signature.nvim'),
 	gh('j-hui/fidget.nvim'),
 
-	-- Completion
-	gh('hrsh7th/nvim-cmp'),
-	gh('hrsh7th/cmp-nvim-lsp'),
-	gh('hrsh7th/cmp-nvim-lua'),
-	gh('hrsh7th/cmp-buffer'),
-	gh('hrsh7th/cmp-path'),
-	gh('hrsh7th/cmp-cmdline'),
-
-	-- Snippets
-	gh('hrsh7th/cmp-vsnip'),
-	gh('hrsh7th/vim-vsnip'),
-
 	-- Color scheme
 	gh('savq/melange'),
 

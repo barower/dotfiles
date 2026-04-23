@@ -1,20 +1,8 @@
 -- Enabled servers
 
-require'cmp'.setup {
-	sources = {
-		{ name = 'nvim_lsp' }
-	}
-}
-
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-vim.lsp.config('clangd', {
-	capabilities = capabilities
-})
 vim.lsp.enable('clangd')
 
 vim.lsp.config('pylsp', {
-	capabilities = capabilities,
 	settings = {
 		pylsp = {
 			configurationSources = {"flake8"};
